@@ -9,3 +9,7 @@ http://www.websimples.org/
 ## Using
 
 ## Requirements
+
+  For this script work correctly, you must install some libraries, such as codecs to run the type of video source and destination, disregarding the need to install "mencoder"
+  If you use Ubuntu, install mencode with this command:
+    <apt-get install mencode>
