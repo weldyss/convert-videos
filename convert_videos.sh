@@ -31,5 +31,5 @@ LIST=$(ls ${ORIGINAL_VIDEOS_DIR} *.${FORMAT_ORIGIN})
 # Running in directory converting all selected videos
 for i in $LIST;
 do
-  mencoder -oac mp3lame -lameopts cbr:br=64:vol=2 -srate 22050 -ovc xvid -sws 1 -xvidencopts bitrate=384:max_key_interval=120:vhq=4 -ofps 30 -vf scale=$SIZE_VIDEOS $ORIGINAL_VIDEOS_DIR/$i -o $OUTPUT_VIDEOS_DIR/$i.$FORMAT_DESTIN
+  mencoder -oac mp3lame -lameopts cbr:br=64:vol=2 -srate 22050 -ovc xvid -sws 1 -xvidencopts bitrate=384:max_key_interval=120:vhq=4 -ofps 30 -vf scale=$SIZE_VIDEOS $ORIGINAL_VIDEOS_DIR/$i -o $OUTPUT_VIDEOS_DIR/$i.$FORMAT_DESTIN -sub $ORIGINAL_VIDEOS_DIR/$i.ssa -font '/usr/share/fonts/truetype/ttf-bitstream-vera/Vera.ttf' 
 done
